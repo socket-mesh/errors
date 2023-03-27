@@ -213,7 +213,7 @@ export class UnknownError extends Error {
 	}
 }
 
-export const socketProtocolErrorStatuses = {
+export const socketProtocolErrorStatuses: { [code: number]: string } = {
   1001: 'Socket was disconnected',
   1002: 'A WebSocket protocol error was encountered',
   1003: 'Server terminated socket because it received invalid data',
@@ -236,7 +236,7 @@ export const socketProtocolErrorStatuses = {
   4009: 'Server received a message before the client handshake'
 };
 
-export const socketProtocolIgnoreStatuses = {
+export const socketProtocolIgnoreStatuses: { [code: number]: string } = {
   1000: 'Socket closed normally',
   1001: 'Socket hung up'
 };
@@ -279,7 +279,7 @@ export function dehydrateError(error: any, includeStackTrace?: boolean): Dehydra
 };
 
 // Convert a dehydrated error back to its *original* form.
-export function hydrateErrorhydrateError(error: DehydratedError): any {
+export function hydrateError(error: DehydratedError): any {
   var hydratedError = null;
 
   if (error != null) {
