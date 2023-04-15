@@ -1,9 +1,18 @@
 import { decycle } from "./decycle";
 export { decycle } from "./decycle";
 
-//var isStrict = (function () { return !this; })();
+// For any other auth token error.
+export class AuthTokenError extends Error {
+	constructor(message: string) {
+		super(message);
 
-export class AuthTokenExpiredError extends Error {
+		this.name = 'AuthTokenError';
+
+		Object.setPrototypeOf(this, AuthTokenError.prototype);
+	}
+}
+
+export class AuthTokenExpiredError extends AuthTokenError {
 	expiry: Date;
 
 	constructor(message: string, expiry: Date) {
@@ -16,7 +25,7 @@ export class AuthTokenExpiredError extends Error {
 	}
 }
 
-export class AuthTokenInvalidError extends Error {
+export class AuthTokenInvalidError extends AuthTokenError {
 	constructor(message: string) {
 		super(message);
 
@@ -26,7 +35,7 @@ export class AuthTokenInvalidError extends Error {
 	}
 }
 
-export class AuthTokenNotBeforeError extends Error {
+export class AuthTokenNotBeforeError extends AuthTokenError {
 	date: Date;
 
 	constructor(message: string, date: Date) {
@@ -36,17 +45,6 @@ export class AuthTokenNotBeforeError extends Error {
 		this.date = date;
 
 		Object.setPrototypeOf(this, AuthTokenNotBeforeError.prototype);
-	}
-}
-
-// For any other auth token error.
-export class AuthTokenError extends Error {
-	constructor(message: string) {
-		super(message);
-
-		this.name = 'AuthTokenError';
-
-		Object.setPrototypeOf(this, AuthTokenError.prototype);
 	}
 }
 
