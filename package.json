@@ -1,40 +1,42 @@
 {
 	"name": "@socket-mesh/errors",
-  "version": "3.0.4",
-  "description": "Error types for use throughout SocketMesh and SocketCluster",
-	"type":"module",
-  "contributors": [
-    "Greg Kimmy",
+	"version": "3.0.5",
+	"description": "Error types for use throughout SocketMesh and SocketCluster",
+	"type": "module",
+	"contributors": [
+		"Greg Kimmy",
 		{
 			"name": "Jonathan Gros-Dubois",
 			"email": "grosjona@yahoo.com.au"
 		}
-  ],
-  "main": "index.js",
-  "scripts": {
-    "build": "node ./scripts/build.mjs && tsc",
-    "deploy": "cd dist && npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/socket-mesh/formatter.git"
-  },
-  "keywords": [
-    "errors",
-    "socketcluster",
+	],
+	"main": "index.js",
+	"scripts": {
+		"build": "node ./scripts/build.mjs && tsc",
+		"deploy": "cd dist && npm publish",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/socket-mesh/formatter.git"
+	},
+	"keywords": [
+		"errors",
+		"socketcluster",
 		"socketmesh"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/socket-mesh/errors/issues"
-  },
-  "homepage": "https://github.com/socket-mesh/errors",	
-  "dependencies": {},
-  "devDependencies": {
-    "@types/jest": "^29.5.0",
-    "@types/node": "^18.15.10",
-    "jest": "^29.5.0",
-    "ts-jest": "^29.0.5"
-  }
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/socket-mesh/errors/issues"
+	},
+	"homepage": "https://github.com/socket-mesh/errors",
+	"dependencies": {
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.5",
+		"@types/node": "^20.8.0",
+		"jest": "^29.7.0",
+		"ts-jest": "^29.1.1",
+		"typescript": "^5.2.2"
+	}
 }
