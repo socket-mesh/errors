@@ -1,4 +1,4 @@
-import { decycle } from "./decycle";
+import { decycle } from "./decycle.js";
 export { decycle } from "./decycle";
 
 // For any other auth token error.
