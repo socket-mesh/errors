@@ -1,5 +1,5 @@
 import { decycle } from "./decycle.js";
-export { decycle } from "./decycle";
+export { decycle } from "./decycle.js";
 
 // For any other auth token error.
 export class AuthTokenError extends Error {

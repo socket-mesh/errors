@@ -1,6 +1,6 @@
 {
 	"name": "@socket-mesh/errors",
-	"version": "3.0.7",
+	"version": "3.0.8",
 	"description": "Error types for use throughout SocketMesh and SocketCluster",
 	"type": "module",
 	"contributors": [
@@ -18,7 +18,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/socket-mesh/formatter.git"
+		"url": "git://github.com/socket-mesh/errors.git"
 	},
 	"keywords": [
 		"errors",
