@@ -59,18 +59,31 @@ export class AuthError extends Error {
 	}
 }
 
-export class MiddlewareClientError extends Error {
-	clientError: Error;
+export class MiddlewareError extends Error {
 	type: string;
 
 	constructor(message: string, type: string, error: Error) {
 		super(message);
 
-		this.name = 'MiddlewareClientError';
-		this.clientError = error;
+		this.name = 'MiddlewareError';
 		this.type = type;
 
-		Object.setPrototypeOf(this, MiddlewareClientError.prototype);
+		Object.setPrototypeOf(this, MiddlewareError.prototype);
+	}
+}
+
+export class MiddlewareCaughtError extends Error {
+	innerError: Error;
+	type: string;
+
+	constructor(message: string, type: string, error: Error) {
+		super(message);
+
+		this.name = 'MiddlewareCaughtError';
+		this.innerError = error;
+		this.type = type;
+
+		Object.setPrototypeOf(this, MiddlewareCaughtError.prototype);
 	}
 }
 
