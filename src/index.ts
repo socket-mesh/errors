@@ -62,7 +62,7 @@ export class AuthError extends Error {
 export class MiddlewareError extends Error {
 	type: string;
 
-	constructor(message: string, type: string, error: Error) {
+	constructor(message: string, type: string) {
 		super(message);
 
 		this.name = 'MiddlewareError';
