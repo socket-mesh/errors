@@ -1,6 +1,16 @@
 import { decycle } from "./decycle.js";
 export { decycle } from "./decycle.js";
 
+export class AbortError extends Error {
+	constructor(message: string) {
+		super(message);
+
+		this.name = 'AbortError';
+
+		Object.setPrototypeOf(this, AbortError.prototype);
+	}
+}
+
 // For any other auth token error.
 export class AuthTokenError extends Error {
 	constructor(message: string) {
